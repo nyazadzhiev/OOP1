@@ -1,8 +1,18 @@
 package com.company;
 
+import java.io.File;
+import java.io.IOException;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        FileEditor fileEditor = new FileEditor();
+
+        fileEditor.open("file.xml");
+        fileEditor.close();
+        fileEditor.open("file.xml");
+        fileEditor.append();
+        String path = "D:" + File.separator + "Test" + File.separator + "test.txt";
+        fileEditor.saveAs(path);
     }
 }
