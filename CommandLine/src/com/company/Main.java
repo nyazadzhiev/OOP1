@@ -1,7 +1,5 @@
 package com.company;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -13,7 +11,8 @@ public class Main {
 
         do {
             command = input.nextLine();
-            commandService.executeCommand(command, "file.xml");
+            String[] commands = command.split(" ");
+            commandService.executeCommand(commands[0], commands.length > 1 ? commands[1] : "1");
         }while(!command.equals("exit"));
     }
 }
