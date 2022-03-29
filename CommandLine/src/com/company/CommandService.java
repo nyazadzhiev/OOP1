@@ -21,7 +21,7 @@ public class CommandService {
             case "close" : fileEditor.close(); break;
             case "save" : fileEditor.save(); break;
             case "saveas" : fileEditor.saveAs(fileData); break;
-            case "append" : fileEditor.append();
+            case "append" : fileEditor.append(fileData);
             case "exit" : return;
             default:
                 System.out.println("Invalid command");

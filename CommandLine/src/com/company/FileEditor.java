@@ -45,14 +45,14 @@ public class FileEditor {
         }
     }
 
-    public void append() {
+    public void append(String value) {
         if(!validation.isFileOpened(this.file)) {
             System.out.println("You don't have opened file");
 
             return;
         }
 
-        edit.append(this.data);
+        edit.append(this.data, value);
     }
 
     public void save() {
