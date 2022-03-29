@@ -2,6 +2,7 @@ package com.company;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
@@ -13,6 +14,10 @@ public class Main {
         fileEditor.open("file.xml");
         fileEditor.append();
         String path = "D:" + File.separator + "Test" + File.separator + "test.txt";
+        fileEditor.saveAs(path);
+        fileEditor.close();
+        fileEditor.open(path);
+        fileEditor.append();
         fileEditor.saveAs(path);
     }
 }
