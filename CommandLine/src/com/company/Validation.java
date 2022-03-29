@@ -12,4 +12,11 @@ public class Validation {
 
         return false;
     }
+
+    public boolean isNullOrEmpty(String str) {
+        if(str.length() == 0 || str == null)
+            return true;
+
+        return false;
+    }
 }
