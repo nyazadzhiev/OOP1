@@ -63,6 +63,8 @@ public class FileEditor {
         }
 
         save.save(this.file, String.valueOf(this.data));
+
+        System.out.println("You saved successfully");
     }
 
     public void saveAs(String fileData) {
@@ -72,5 +74,6 @@ public class FileEditor {
             return;
         }
         save.saveAs(fileData, String.valueOf(this.data));
+        System.out.println("You saved successfully");
     }
 }
