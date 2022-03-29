@@ -10,8 +10,9 @@ public class Main {
         FileEditor fileEditor = new FileEditor();
 
         fileEditor.open("file.xml");
-        fileEditor.close();
         fileEditor.open("file.xml");
+        fileEditor.close();
+        fileEditor.close();
         fileEditor.append();
         String path = "D:" + File.separator + "Test" + File.separator + "test.txt";
         fileEditor.saveAs(path);
