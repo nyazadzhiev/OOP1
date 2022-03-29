@@ -10,10 +10,9 @@ public class EditFile {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter value to append\n");
-        String value = input.nextLine();
-
-        data.append(value);
-
-        input.close();
+        if(input.hasNextLine()) {
+            String value = input.nextLine();
+            data.append(value);
+        }
     }
 }

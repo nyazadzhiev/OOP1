@@ -30,6 +30,7 @@ public class FileEditor {
     public void close() {
         if(this.file != null) {
             this.file = (File) read.closeFile();
+            this.data.setLength(0);
 
             System.out.println("File closed");
         }else{

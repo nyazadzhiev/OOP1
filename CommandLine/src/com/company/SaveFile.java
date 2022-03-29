@@ -8,6 +8,7 @@ public class SaveFile {
 
     public void save(File file, String data) {
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(file))){
+            bw.write("");
             bw.write(data);
 
             bw.close();
@@ -18,13 +19,16 @@ public class SaveFile {
 
     public void saveAs(String fileData, String data) {
         File file = new File(fileData);
-        try {
-            file.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(!file.isFile()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(file))){
+            bw.write("");
             bw.write(data);
 
             bw.close();
