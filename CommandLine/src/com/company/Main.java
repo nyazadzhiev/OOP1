@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
 
         do {
             command = input.nextLine();
-            String[] commands = command.split(" ");
+            String[] commands = command.split(" ", 2);
             commandService.executeCommand(commands[0], commands.length > 1 ? commands[1] : "1");
         }while(!command.equals("exit"));
     }

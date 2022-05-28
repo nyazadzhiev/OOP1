@@ -76,4 +76,8 @@ public class FileEditor {
         save.saveAs(fileData, String.valueOf(this.data));
         System.out.println("You saved successfully");
     }
+
+    public void help() {
+        edit.help();
+    }
 }
